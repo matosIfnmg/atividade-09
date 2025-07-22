@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Experiência com Flexbox - Vinicius Araujo Matos</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Relatório de Experiência com Flexbox</h1>
+        </header>
+
+        <main>
+            <section id="student-info">
+                <h2>Nome Completo</h2>
+                <p>Vinicius Araujo Matos</p>
+            </section>
+
+            <section id="games" class="game-section">
+                <h2>Jogos Escolhidos</h2>
+                
+                <article>
+                    <h3>Flexbox Froggy</h3>
+                    <p><strong>Link:</strong> <a href="https://flexboxfroggy.com/" target="_blank">https://flexboxfroggy.com/</a></p>
+                    <p><strong>Justificativa:</strong> Escolhi o Flexbox Froggy por ser um dos jogos mais recomendados para iniciantes. Sua abordagem é direta, focada em introduzir uma propriedade por vez de forma visual e interativa, o que facilita a memorização e a compreensão do efeito de cada comando de maneira isolada.</p>
+                </article>
+
+                <article>
+                    <h3>Flexbox Adventure</h3>
+                    <p><strong>Link:</strong> <a href="https://codingfantasy.com/games/flexboxadventure/play" target="_blank">https://codingfantasy.com/games/flexboxadventure/play</a></p>
+                    <p><strong>Justificativa:</strong> Optei pelo Flexbox Adventure como um segundo passo, pois ele combina uma narrativa de jogo de RPG com os desafios do CSS. Ele exige a combinação de múltiplas propriedades mais cedo que o Froggy, simulando cenários mais complexos e me forçando a pensar em como as propriedades interagem entre si para resolver um problema.</p>
+                </article>
+            </section>
+
+            <section id="levels">
+                <h2>Registro de Níveis</h2>
+
+                <div class="game-section">
+                    <h3>Flexbox Froggy (Sapo)</h3>
+                    
+                    <div class="level-section">
+                        <h4>Nível 8 - Invertendo a Ordem</h4>
+                        <img src="img/sapo8.png" alt="Print Screen do Nível 8 do Flexbox Froggy">
+                        <p>
+                            O desafio do nível 8 foi puramente conceitual: entender o `flex-direction: row-reverse`. A ideia de que eu poderia inverter a ordem dos elementos apenas com uma linha de CSS foi muito poderosa. A dificuldade inicial foi abandonar a ordem padrão do HTML e confiar que o CSS poderia reorganizar os elementos visualmente de forma tão simples.
+                        </p>
+                    </div>
+
+                    <div class="level-section">
+                        <h4>Nível 9 - Mudando o Eixo para Coluna</h4>
+                        <img src="img/sapo9.png" alt="Print Screen do Nível 9 do Flexbox Froggy">
+                        <p>
+                           Este nível foi desafiador por introduzir o `flex-direction: column`. A tarefa de mudar o eixo principal de horizontal para vertical representa uma mudança fundamental na forma de pensar sobre o layout. Foi um passo importante para entender que a "direção" do flexbox não é fixa e pode ser manipulada conforme a necessidade do design.
+                        </p>
+                    </div>
+                    
+                    <div class="level-section">
+                        <h4>Nível 10 - Direção Reversa e Alinhamento</h4>
+                        <img src="img/sapo10.png" alt="Print Screen do Nível 10 do Flexbox Froggy">
+                        <p>
+                            Este nível juntou a dificuldade do nível 8 com um novo conceito. Ele exigiu `flex-direction: row-reverse` e `justify-content: flex-end`. O ponto desafiador foi compreender que ao inverter o eixo, o `flex-start` passa a ser na direita e o `flex-end` na esquerda. Levei um tempo para assimilar que a direção do eixo afeta diretamente o comportamento do `justify-content`.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="game-section">
+                    <h3>Flexbox Adventure (RPG)</h3>
+
+                    <div class="level-section">
+                        <h4>Nível 8 - Centralização Completa</h4>
+                         <img src="img/rpg8.png" alt="Print Screen do Nível 8 do Flexbox Adventure">
+                        <p>
+                            Este foi um nível desafiador por exigir a combinação de `justify-content: center` e `align-items: center`. No contexto deste jogo, com mais elementos na tela, a necessidade de controlar os dois eixos para um posicionamento preciso no centro do campo de batalha se tornou muito clara e foi um aprendizado fundamental.
+                        </p>
+                    </div>
+
+                    <div class="level-section">
+                        <h4>Nível 9 - Alinhamento e Distribuição</h4>
+                        <img src="img/rpg9.png" alt="Print Screen do Nível 9 do Flexbox Adventure">
+                        <p>
+                           Este nível aumentou a complexidade ao exigir `align-items: flex-end` para mover os heróis para baixo, combinado com `justify-content: space-evenly` para distribuí-los horizontalmente. O desafio foi usar um valor de distribuição mais complexo (`space-evenly`) enquanto também se preocupava com o alinhamento vertical.
+                        </p>
+                    </div>
+                    
+                    <div class="level-section">
+                        <h4>Nível 10 - Mudança de Eixo para Coluna</h4>
+                        <img src="img/rpg10.png" alt="Print Screen do Nível 10 do Flexbox Adventure">
+                        <p>
+                            O desafio aqui foi a introdução do `flex-direction: column`. Mudar o eixo principal de horizontal para vertical foi uma grande mudança na forma de pensar. Entender que, após essa mudança, `justify-content` passaria a controlar o alinhamento vertical e `align-items` o horizontal foi essencial para resolver o problema.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="reflection">
+                <h2>Reflexão e Aplicação Prática</h2>
+
+                <h3>Propriedades CSS Utilizadas</h3>
+                <ul>
+                    <li><code>display: flex;</code>: Transforma um elemento em um "flex container", permitindo que seus filhos diretos ("flex items") sejam alinhados e distribuídos de forma flexível.</li>
+                    <li><code>justify-content:</code>: Alinha os itens ao longo do eixo principal (horizontal, por padrão). Seus valores (<code>flex-start</code>, <code>center</code>, <code>flex-end</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code>) definem como o espaço extra é distribuído.</li>
+                    <li><code>align-items:</code>: Alinha os itens ao longo do eixo secundário (vertical, por padrão). Seus valores (<code>flex-start</code>, <code>center</code>, <code>flex-end</code>, <code>stretch</code>) controlam o posicionamento dos itens dentro da linha.</li>
+                    <li><code>flex-direction:</code>: Define a direção do eixo principal. Pode ser <code>row</code> (padrão), <code>row-reverse</code>, <code>column</code> ou <code>column-reverse</code>. Alterar isso troca os eixos principal e secundário.</li>
+                </ul>
+
+                <h3>Exemplo de Aplicação Prática: Menu de Navegação Responsivo</h3>
+                <p>
+                    Eu usaria o Flexbox para criar o cabeçalho de um site. O cabeçalho (uma tag <code>&lt;header&gt;</code>) seria o flex container (<code>display: flex;</code>). Dentro dele, eu teria o logo da empresa (<code>&lt;img&gt;</code>) e a lista de links de navegação (<code>&lt;nav&gt;</code> com uma lista <code>&lt;ul&gt;</code>).
+                </p>
+                <p>
+                    Para posicionar o logo à esquerda e os links à direita, eu aplicaria <code>justify-content: space-between;</code> no <code>&lt;header&gt;</code>. Isso empurraria os dois elementos para os extremos opostos. Para garantir que eles fiquem alinhados verticalmente no centro do cabeçalho, eu usaria <code>align-items: center;</code>.
+                </p>
+                <p>
+                    Para a lista de links dentro do <code>&lt;nav&gt;</code>, eu também usaria <code>display: flex;</code> na tag <code>&lt;ul&gt;</code> para que os itens do menu (<code>&lt;li&gt;</code>) ficassem em uma linha horizontal, com um espaçamento entre eles que eu poderia definir com a propriedade <code>gap</code> ou margens. Assim, de forma simples e com poucas linhas de código, eu teria um cabeçalho moderno, alinhado e flexível.
+                </p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
